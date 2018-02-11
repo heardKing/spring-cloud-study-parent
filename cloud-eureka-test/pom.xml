@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-cloud-study-parent</artifactId>
+        <groupId>com.cuixx</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cuixx</groupId>
+    <artifactId>cloud-eureka-test</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>micro-service-discovery-eureka</module>
+        <module>micro-service-provider-user</module>
+        <module>micro-service-consumer-movie</module>
+        <module>micro-service-discovery-eureka-ha</module>
+        <module>micro-service-discoery-eureka-authenticating</module>
+        <module>micro-service-provider-user-my-metadata</module>
+        <module>micro-service-consumer-movie-understanding-metadata</module>
+    </modules>
+
+</project>

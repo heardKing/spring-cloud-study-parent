@@ -1,0 +1,42 @@
+server:
+  port: 8001
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:sql/schema.sql
+    data: classpath:sql/data.sql
+  application:
+    name: micro-service-provider-user
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/  #,http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+---
+spring:
+  profiles: aaa
+server:
+  port: 8001
+---
+spring:
+  profiles: bbb
+server:
+  port: 8002
+---
+spring:
+  profiles: ccc
+server:
+  port: 8003
